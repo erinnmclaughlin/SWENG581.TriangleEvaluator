@@ -23,3 +23,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test /p:CollectCoverage=true --no-build --verbosity normal
+    - name: OpenCover Badge Generator
+      uses: danpetitt/open-cover-badge-generator-action@v1.0.10
