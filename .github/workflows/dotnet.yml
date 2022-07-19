@@ -27,5 +27,6 @@ jobs:
       uses: danpetitt/open-cover-badge-generator-action@v1.0.10
       with:
           path-to-opencover-xml: ./SWENG581.TriangleEvaluator.Tests/coverage.opencover.xml
+          path-to-badges: ./SWENG581.TriangleEvaluator.Tests
           minimum-coverage: 75
           repo-token: ${{ secrets.CI_TOKEN }}

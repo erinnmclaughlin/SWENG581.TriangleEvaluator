@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SWENG581.TriangleEvaluator\SWENG581.TriangleEvaluator.csproj" />
+    <ProjectReference Include="..\..\SWENG581.TriangleEvaluator\SWENG581.TriangleEvaluator.csproj" />
   </ItemGroup>
 
 </Project>
