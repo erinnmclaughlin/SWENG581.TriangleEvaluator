@@ -32,6 +32,7 @@ public class TriangleEvaluatorTests
 
     [Theory]
     [InlineData(1)]
+    [InlineData(5)]
     [InlineData(double.Epsilon)]
     [InlineData(double.MaxValue)]
     public void TriangleEvaluator_ShouldIdentifyEquilateralTriangle(double sideLength)

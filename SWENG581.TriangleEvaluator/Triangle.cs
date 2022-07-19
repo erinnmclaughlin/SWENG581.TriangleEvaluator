@@ -5,9 +5,9 @@ public class Triangle
     public double A { get; init; }
     public double B { get; init; }
     public double C { get; init; }
-    public double[] Sides => new double[] { A, B, C };
 
     private double LargestSide => Sides.Max();
+    public double[] Sides => new double[] { A, B, C };
 
     public Triangle(double a, double b, double c)
     {
