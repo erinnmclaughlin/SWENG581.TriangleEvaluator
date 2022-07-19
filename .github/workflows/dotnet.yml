@@ -28,5 +28,4 @@ jobs:
       with:
           path-to-opencover-xml: ./SWENG581.TriangleEvaluator.Tests/coverage.opencover.xml
           minimum-coverage: 75
-          commit-badges: false
           repo-token: ${{ secrets.CI_TOKEN }}
