@@ -25,3 +25,9 @@ jobs:
       run: dotnet test /p:CollectCoverage=true --no-build --verbosity normal
     - name: OpenCover Badge Generator
       uses: danpetitt/open-cover-badge-generator-action@v1.0.10
+      with:
+          path-to-opencover-xml: ./coverage/opencover.xml
+          path-to-badges: ./coverage
+          minimum-coverage: 75
+          commit-badges: false
+          repo-token: ${{ secrets.CI_TOKEN }}
