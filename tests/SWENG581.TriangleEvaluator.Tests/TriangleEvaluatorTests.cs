@@ -6,6 +6,23 @@ namespace SWENG581.TriangleEvaluator.Tests;
 public class TriangleEvaluatorTests
 {
     [Theory]
+    [InlineData(0, 5, 5)]
+    [InlineData(-1, 5, 5)]
+    [InlineData(5, 0, 5)]
+    [InlineData(5, -1, 5)]
+    [InlineData(5, 5, 0)]
+    [InlineData(5, 5, -1)]
+    [InlineData(0, 0, 0)]
+    [InlineData(-1, -1, -1)]
+    [InlineData(0, -1, 5)]
+    [InlineData(5, 0, -1)]
+    public void TriangleEvaluator_ShouldThrowArgumentException_WhenAnySideIsZeroOrNegative(double a, double b, double c)
+    {
+        var action = () => TriangleEvaluator.GetTriangleDescription(a, b, c);
+        action.Should().Throw<ArgumentException>();
+    }
+
+    [Theory]
     [InlineData(5, 5, 10)] // A = B, C = A + B
     [InlineData(5, 5, 11)] // A = B, C > A + B
     [InlineData(6, 5, 11)] // A > B, C = A + B
